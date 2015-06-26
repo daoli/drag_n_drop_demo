@@ -1,0 +1,32 @@
+<head>
+  <title>Drag-and-drop Demo</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>This is merely a demo</h1>
+      <h4>Try it yourself: drag a city on the left to the chart on the right!</h4>
+    </div>
+
+    {{> cityList}}
+    {{> highchartsPlot}}
+  </div>
+</body>
+
+<template name="cityList">
+  <div class="col-md-2">
+    <ul class="list-group">
+      <li class="list-group-item">New York</li>
+      <li class="list-group-item">Berlin</li>
+      <li class="list-group-item">Tokyo</li>
+      <li class="list-group-item">London</li>
+    </ul>
+  </div>
+</template>
+
+<template name="highchartsPlot">
+  <div class="col-md-10">
+    {{> highchartsHelper chartId="demo" chartWidth="100%" charHeight="100%" chartObject=demoChart}}
+  </div>
+</template>
